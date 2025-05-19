@@ -1,4 +1,4 @@
-# projeto_etl_completo
+
 # Projeto ETL - FastAPI + PostgreSQL
 
 Este projeto implementa uma API com FastAPI que consulta dados do banco de dados **Fonte**, e um script de ETL que transforma e carrega os dados no banco de dados **Alvo**.
