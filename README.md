@@ -14,6 +14,6 @@ Este projeto implementa uma API com FastAPI que consulta dados do banco de dados
 Clone o repositório e instale as dependências:
 
 ```bash
-git clone https://github.com/seu-usuario/etl_project.git
-cd etl_project
+git clone https://github.com/seu-usuario/projeto_etl.git
+cd projeto_etl
 pip install -r requirements.txt
