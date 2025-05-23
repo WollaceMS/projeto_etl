@@ -11,12 +11,13 @@ import uvicorn
 # =============================
 # Configurações de banco
 # =============================
-USER = "postgres"
-ENCODED_PASSWORD = "Pizza0305%40"
-HOST = "db_fonte"
-PORT = "5432"
-DB = "Fonte"
-URL = f"postgresql+psycopg2://{USER}:{ENCODED_PASSWORD}@{HOST}:{PORT}/{DB}"
+USER = os.getenv("DB_USER", "postgres")
+PASSWORD = os.getenv("DB_PASSWORD", "Pizza0305%40")
+HOST = os.getenv("DB_HOST", "localhost")  # <- Aqui entra o endereço real no deploy!
+PORT = os.getenv("DB_PORT", "5432")
+DB = os.getenv("DB_NAME", "Fonte")
+
+URL = f"postgresql+psycopg2://{USER}:{PASSWORD}@{HOST}:{PORT}/{DB}"
 
 # Conecta com SQLAlchemy
 engine = create_engine(URL)
