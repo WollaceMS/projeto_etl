@@ -13,7 +13,7 @@ import sys
 # =============================
 
 # URL da API que expõe os dados do banco "Fonte"
-API_URL = "http://127.0.0.1:8000/dados"
+API_URL = "http://api_fonte:8000/dados"
 
 # Dados para conectar ao banco "Alvo"
 USER = "postgres"

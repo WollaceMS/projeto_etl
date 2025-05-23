@@ -13,7 +13,7 @@ import uvicorn
 # =============================
 USER = "postgres"
 ENCODED_PASSWORD = "Pizza0305%40"
-HOST = "localhost"
+HOST = "db_fonte"
 PORT = "5432"
 DB = "Fonte"
 URL = f"postgresql+psycopg2://{USER}:{ENCODED_PASSWORD}@{HOST}:{PORT}/{DB}"

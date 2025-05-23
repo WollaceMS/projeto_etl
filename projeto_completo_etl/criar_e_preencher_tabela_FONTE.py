@@ -26,7 +26,7 @@ USER = "postgres"           # Nome do usuário do banco
 PASSWORD = "Pizza0305@"       # Senha original do usuário (sem codificação)
 ENCODED_PW = "Pizza0305%40"   # Senha codificada (o @ vira %40 para ser usada na URL de conexão)
 HOST = "localhost"          # Servidor onde o banco está hospedado (localhost = máquina local)
-PORT = "5432"               # Porta padrão do PostgreSQL
+PORT = "5433"               # Porta padrão do PostgreSQL
 DB = "Fonte"                # Nome do banco de dados a ser usado/criado
 
 # Monta a URL de conexão para o SQLAlchemy (ORM)

@@ -1,0 +1,41 @@
+version: "3.9"
+
+services:
+  db_fonte:
+    image: postgres:15
+    environment:
+      POSTGRES_DB: Fonte
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: Pizza0305@
+    ports:
+      - "5433:5432"
+    volumes:
+      - fonte_data:/var/lib/postgresql/data
+
+  db_alvo:
+    image: postgres:15
+    environment:
+      POSTGRES_DB: Alvo
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: Pizza0305@
+    ports:
+      - "5434:5432"
+    volumes:
+      - alvo_data:/var/lib/postgresql/data
+
+  api_fonte:
+    build: .
+    depends_on:
+      - db_fonte
+    ports:
+      - "8000:8000"
+    environment:
+      - DB_HOST=db_fonte
+      - DB_PORT=5432
+      - DB_NAME=Fonte
+      - DB_USER=postgres
+      - DB_PASSWORD=Pizza0305@
+
+volumes:
+  fonte_data:
+  alvo_data:
